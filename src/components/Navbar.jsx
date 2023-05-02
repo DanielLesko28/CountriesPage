@@ -1,20 +1,22 @@
+import { Box, Heading } from "@chakra-ui/react";
 import React from "react";
+import { Link } from "react-router-dom";
+import Continets from "./Continets";
 
-const Navbar = ({ data }) => {
+const Navbar = () => {
   return (
-    <div
-      style={{
-        width: "100%",
-        border: "1px solid black",
-        padding: "1rem",
-        display: "flex",
-        justifyContent: "space-between",
-      }}
+    <Box
+      pb={4}
+      p={2}
+      bg="linear-gradient(to right, #F6E05E, #F67280)"
+      display="flex"
+      justifyContent="space-between"
     >
-      {data.map((region, index) => (
-        <p key={index}>{region}</p>
-      ))}
-    </div>
+      <Link to={"/"}>
+        <Heading size="lg">Countries of the World</Heading>
+      </Link>
+      <Continets />
+    </Box>
   );
 };
 

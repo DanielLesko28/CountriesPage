@@ -5,7 +5,12 @@ const SearchInput = ({ searchValue, handleSearch }) => {
     <div>
       <input
         placeholder="Search Country..."
-        style={{ padding: "2px", margin: "1rem" }}
+        style={{
+          padding: "4px",
+          margin: "1rem",
+          border: "1px solid black",
+          borderRadius: "2px",
+        }}
         value={searchValue}
         onChange={handleSearch}
       />
