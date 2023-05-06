@@ -3,7 +3,7 @@ import useCountriesHook from "../hooks/countriesHook";
 import { useParams } from "react-router-dom";
 
 import Loader from "../components/Loader";
-import Table from "../components/Table";
+// import Table from "../components/Table";
 
 function CountryDetailPage() {
   const { countryId } = useParams();
@@ -11,6 +11,9 @@ function CountryDetailPage() {
   const { data } = useCountriesHook(
     `https://restcountries.com/v3.1/alpha/${countryId}`
   );
+
+  console.log("countryId", countryId);
+  console.log("data", data);
 
   return (
     <div>

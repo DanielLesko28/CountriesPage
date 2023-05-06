@@ -4,7 +4,7 @@ import useCountriesHook from "../hooks/countriesHook";
 import { Spinner } from "@chakra-ui/react";
 
 const Continets = ({ onContinentSelect }) => {
-  const [selectedVAlue, setSelectedValue] = useState("");
+  const [selectedVAlue, setSelectedValue] = useState(null);
 
   const handleChange = (event) => {
     setSelectedValue(event.target.value);
